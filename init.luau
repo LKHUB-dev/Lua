@@ -16,7 +16,7 @@ getgenv().requireL = function(path)
     -- Construct the URL to fetch the script from GitHub
     local url = string.format("https://raw.githubusercontent.com/%s/%s/refs/heads/%s/%s",
         Config.githubUsername, -- 1
-        Config.githubRepo,     -- 2
+        "Lua",     -- 2
         Config.githubBranch,   -- 3
         path                   -- 4
     )
