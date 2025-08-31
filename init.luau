@@ -1,12 +1,6 @@
 print("eh")
 local HttpService = game:GetService("HttpService") -- HttpService for fetching the JSON
 
-local Config = {
-    githubUsername = "LKHUB-dev",
-    githubRepo = "Lua",
-    githubBranch = "main",
-}
-
 getgenv().requireL = function(path)
     -- Ensure the path is a string
     assert(type(path) == "string", "invalid argument #1 to 'requireL' (string expected, got " .. type(path) .. ")", 2)
@@ -14,10 +8,7 @@ getgenv().requireL = function(path)
     warn("requireL used.")
 
     -- Construct the URL to fetch the script from GitHub
-    local url = string.format("https://raw.githubusercontent.com/%s/%s/refs/heads/%s/%s",
-        Config.githubUsername, -- 1
-        "Lua",     -- 2
-        Config.githubBranch,   -- 3
+    local url = string.format("https://raw.githubusercontent.com/LKHUB-dev/Lua/refs/heads/main/%s",
         path                   -- 4
     )
 
