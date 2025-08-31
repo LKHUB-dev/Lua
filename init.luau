@@ -3,7 +3,7 @@ local HttpService = game:GetService("HttpService") -- HttpService for fetching t
 
 local Config = {
     githubUsername = "LKHUB-dev",
-    githubRepo = "LuaLoader",
+    githubRepo = "Lua",
     githubBranch = "main",
 }
 
