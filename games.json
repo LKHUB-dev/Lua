@@ -1,6 +1,7 @@
 {
     "placeScripts": {},
     "gameIdScripts": {
-        "5166944221": "https://api.luarmor.net/files/v3/loaders/e39a1e5b3399a56768ec682ddb014c2e.lua"
+        "5166944221": "https://api.luarmor.net/files/v3/loaders/e39a1e5b3399a56768ec682ddb014c2e.lua",
+        "274816972": "https://api.luarmor.net/files/v3/loaders/5b6a82eab03a29fc25fab5aca5c05109.lua"
     }
 }
