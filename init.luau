@@ -9,7 +9,7 @@ local function setOdus(path)
     if response.Success then
         return response.Body
     else
-        error("Failed to fetch script from: " .. url .. " | Error: " .. response.StatusCode)
+        --error("Failed to fetch script from: " .. url .. " | Error: " .. response.StatusCode)
     end
 end
 
@@ -28,23 +28,29 @@ local gameUrl = ""
 local function runScript()
     if GameScripts.placeScripts[placeId] then
         gameUrl = GameScripts.placeScripts[placeId]
-        print("PlaceId script found for place:", placeId, "URL:", gameUrl)
+        --print("PlaceId script found for place:", placeId, "URL:", gameUrl)
     end
 
     if gameUrl == "" and GameScripts.gameIdScripts[gameId] then
         gameUrl = GameScripts.gameIdScripts[gameId]
-        print("GameId script found for game:", gameId, "URL:", gameUrl)
+        --print("GameId script found for game:", gameId, "URL:", gameUrl)
     end
 
     if gameUrl ~= "" then
         local success, err = pcall(function()
-            loadstring(game:HttpGet(gameUrl))()
+            --loadstring(game:HttpGet(gameUrl))()
+            loadstring(
+                request({
+                    Url = gameUrl;
+                    Method = "GET";
+                }).Body
+            )()
         end)
         if not success then
-            warn("Failed to execute script from URL:", gameUrl, "| Error:", err)
+            --warn("Failed to execute script from URL:", gameUrl, "| Error:", err)
         end
     else
-        warn("No matching script found for PlaceId:", placeId, "or GameId:", gameId)
+        --warn("No matching script found for PlaceId:", placeId, "or GameId:", gameId)
     end
 end
 
