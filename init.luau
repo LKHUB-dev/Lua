@@ -24,10 +24,8 @@ local GameScripts = tableSupportedGames()
 local function runScript()
     local gameData = nil
 
-    -- First try to find by gameId
     if GameScripts[gameId] then
         gameData = GameScripts[gameId]
-        --print("GameId script found for game:", gameId, "Game:", gameData.gameName)
     end
 
     -- If not found by gameId, search through placeIds
@@ -37,7 +35,6 @@ local function runScript()
                 for _, pId in ipairs(data.placeIds) do
                     if tostring(pId) == placeId then
                         gameData = data
-                        --print("PlaceId script found for place:", placeId, "Game:", gameData.gameName)
                         break
                     end
                 end
@@ -55,11 +52,6 @@ local function runScript()
                 }).Body
             )()
         end)
-        if not success then
-            --warn("Failed to execute script for:", gameData.gameName, "| Error:", err)
-        end
-    else
-        --warn("No matching script found for PlaceId:", placeId, "or GameId:", gameId)
     end
 end
 

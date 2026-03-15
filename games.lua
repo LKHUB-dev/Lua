@@ -1,7 +1,12 @@
 return {
-	["5166944221"] = {
-		gameName = "ValleyBall Legends",
-		placeIds = {},
-		scriptUrl = "https://cdn.authguard.org/virtual-file/cf609d8990eb4f93bb220c83bac8cb2e"
+	["1168263273"] = {
+		gameName = "[🎃] Bad Business | FPS ",
+		placeIds = { 3233893879 },
+		scriptUrl = "https://raw.githubusercontent.com/LKHUB-dev/Lua/refs/heads/main/scripts/bad_business.lua"
 	},
+	["1168263273"] = {
+		gameName = "[🎃] Bad Business | FPS ",
+		placeIds = { 3233893879 },
+		scriptUrl = "https://raw.githubusercontent.com/LKHUB-dev/Lua/refs/heads/main/scripts/car_crushers_2.lua"
+	}
 }
